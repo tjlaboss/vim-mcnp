@@ -107,6 +107,27 @@ syn region imcnpType    start=/file\s*=\s*/   end=/\s/ end=/$/
 syn region imcnpComment start=/encode\s*=\s*/ end=/\s/ end=/$/
 syn region imcnpComment start=/decode\s*=\s*/ end=/\s/ end=/$/
 
+" PTRAC card
+syn keyword imcnpKeyword    ptrac
+" PTRAC output control
+syn region imcnpType    start=/buffer\s*=\s*/    end=/\s/ end=/$/
+syn region imcnpType    start=/file\s*=\s*/      end=/\s/ end=/$/
+syn region imcnpType    start=/flushnps\s*=\s*/  end=/\s/ end=/$/
+syn region imcnpType    start=/max\s*=\s*/       end=/\s/ end=/$/
+syn region imcnpType    start=/meph\s*=\s*/      end=/\s/ end=/$/
+syn region imcnpType    start=/write\s*=\s*/     end=/\s/ end=/$/
+syn region imcnpType    start=/coinc\s*=\s*/     end=/\s/ end=/$/
+" PTRAC event filter
+syn region imcnpKeyword start=/event\s*=\s*/     end=/\s/ end=/$/
+syn region imcnpKeyword start=/filter\s*=\s*/    end=/\s/ end=/$/
+syn region imcnpKeyword start=/type\s*=\s*/      end=/\s/ end=/$/
+" PTRAC history filter
+syn region imcnpComment start=/nps\s*=\s*/       end=/\s/ end=/$/
+syn region imcnpComment start=/cell\s*=\s*/      end=/\s/ end=/$/
+syn region imcnpComment start=/surface\s*=\s*/   end=/\s/ end=/$/
+syn region imcnpComment start=/tally\s*=\s*/     end=/\s/ end=/$/
+syn region imcnpComment start=/value\s*=\s*/     end=/\s/ end=/$/
+
 "Catch errors caused by too many right parentheses
 syn region imcnpParen transparent start="(" end=")" contains=ALLBUT,imcnpParenError,@imcnpCommentGroup,cIncluded,@spell
 syn match  imcnpParenError   ")"
